@@ -1,4 +1,5 @@
-%read all and harm Analysis all
+% read all note recording of Hulusi 
+% Find the note frequency and Analysis all harmonious freqency  
 
 
 clc;clear all;close all;
@@ -20,26 +21,14 @@ for k = 1:10
     % 生成完整的文件名
     fileName = sprintf(baseFileName, fileNumber);
     
-    % 检查文件是否存在
+    % Checking the file existence
     if exist(fileName, 'file')
-        % 读取音频数据和采样率
+        % read audio file and SampleRate Fs
         [y, Fs] = audioread(fileName);
         [baseFreq(k),HarmScale(:,k)]=harmAnalysis(y,Fs);
 
-        % % 播放音频
-        % sound(y, Fs);
-        % 
-        % % 显示当前播放的文件名
-        % fprintf('Playing %s\n', fileName);
-        % 
-        % % 等待音频播放完毕再继续
-        % pause(length(y)/Fs);
-
-
-
-
     else
-        % 如果文件不存在，显示错误信息
+        % error if there is no such file
         fprintf('File %s not found.\n', fileName);
     end
 end
