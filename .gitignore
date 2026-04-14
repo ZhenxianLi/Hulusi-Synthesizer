@@ -1,0 +1,7 @@
+# Build artifacts
+vst-juce/build/
+dist/
+
+# Common macOS/Windows noise
+.DS_Store
+Thumbs.db
