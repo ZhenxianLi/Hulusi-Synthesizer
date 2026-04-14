@@ -27,7 +27,7 @@
 ### 第 1 步：在 MATLAB 算法核心中迭代
 只在 `algorithm-core/matlab/` 修改算法。
 
-你可以继续使用：
+可以继续使用：
 - `harmAnalysis.m` 做录音分析
 - `playYueguang.m` 做音色验证
 - `HulusiVSTPlugin.m` 用 `audioTestBench` 快速试听
@@ -38,7 +38,7 @@
 - log2 频率轴插值（扩展到完整 MIDI 音域）
 - 包络 / 呼吸噪声 / 颤音
 
-当你更新 MATLAB 参数后，把对应数值同步到 `HulusiEngine.h` 即可。
+当更新 MATLAB 参数后，把对应数值同步到 `HulusiEngine.h` 即可。
 
 ### 第 3 步：构建 VST3（可用于 REAPER）
 
@@ -48,7 +48,7 @@ cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release
 ```
 
-如果你的环境不能访问 GitHub，请先准备本地 JUCE 源码，然后这样构建：
+如果的环境不能访问 GitHub，请先准备本地 JUCE 源码，然后这样构建：
 
 ```bash
 cd vst-juce
@@ -91,7 +91,7 @@ JUCE_SOURCE_DIR=/path/to/JUCE bash tools/package_vst.sh
 2. 查找 `HulusiVST.vst3`
 3. 打包为 `dist/hulusi-vst3-<platform>.zip`
 
-你可以把 zip 直接用于内部测试分发，或附到 GitHub Release。
+可以把 zip 直接用于内部测试分发，或附到 GitHub Release。
 
 ---
 
